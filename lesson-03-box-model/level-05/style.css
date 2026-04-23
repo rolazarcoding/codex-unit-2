@@ -1,10 +1,24 @@
 /* TODO: Change display types to see how width/height/padding behave */
 .demo-inline {
-  display: inline;
-  background: #fee;
+  background: rgb(255, 101, 101);
+  width: 1000px;
+}
+.demo-inline2 {
+  background: rgb(255, 83, 83);
+}
+.demo-inline3 {
+  display: block;
+  background: rgb(255, 0, 0);
 }
 .demo-block {
-  display: block;
-  background: #eef;
-  width: 200px;
+  display: inline;
+  width: 1000px;
+  background: rgb(199, 199, 255);
+}
+.demo-block2 {
+  width: 300px;
+  background: rgb(131, 131, 255);
+}
+.demo-block3 {
+  background: rgb(68, 68, 255);
 }
