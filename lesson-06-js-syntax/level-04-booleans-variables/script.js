@@ -4,4 +4,7 @@
 // Example:
 // let isLoggedIn = false;
 
-let isLoggedIn = false;
+const isLoggedIn = false;
+const shouldDisplay = true;
+const canClick = false;
+const hasLegs = true;
