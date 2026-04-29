@@ -1,7 +1,7 @@
 // Level 06 — Debug array declarations
 // TODO: Fix provided broken array snippets so each is a valid one-line array with >=3 items.
 
-const arr1 = "a", "b", "c";
+const arr1 = ["a", "b", "c"];
 
 const arr2 = ["a" "b", "c"];
 
@@ -11,10 +11,9 @@ const arr4 = [apple, banana, cherry];
 
 const = [1,2,3];
 
-const arr6 = [1,2,
-3]
+const arr6 = [1,2,3];
 
-const arr7 = ['a", 'b', 'c'];
+const arr7 = ["a", "b", "c"];
 
 const arr8 = [1,2,3,];
 
