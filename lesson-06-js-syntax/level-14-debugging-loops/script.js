@@ -13,12 +13,15 @@ for (let i = 1; i <= 5 i++) {
 }
 
 // BROKEN: Should display 0 to 3.
-for (i = 0; i < 4; i++) 
+for (i = 0; i < 4; i++) {
   console.log(i);
+}
+  
 
 // BROKEN: Should display 5 to 1.
 for (let i = 5; i > 0; i--) { 
-  console.log(i)
+  console.log(i);
+}
 
 // BROKEN: Should display even numbers 0 to 4.
 for (let i = 0; i  4; i = i + 2) { 
@@ -26,7 +29,7 @@ for (let i = 0; i  4; i = i + 2) {
 }
 
 // BROKEN: Should display 3 to 7.
-for (let i = 3; i < =7; i++) { 
+for (let i = 3; i <= 7; i++) { 
   console.log(i); 
 }
 
