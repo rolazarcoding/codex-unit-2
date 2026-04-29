@@ -7,4 +7,11 @@
 
 // Add your lines below:
 
-let totalCount = 0;
+const userName = "Rolazar";
+const carColor = "gray";
+
+const totalCount = 0;
+const yearBorn = 2026;
+const numberOfStudents = 10;
+
+export default yearBorn;
