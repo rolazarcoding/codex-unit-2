@@ -1,23 +1,23 @@
 // Level 12 — Debug function declarations and calls
 // TODO: Fix five broken function declarations and their corresponding calls.
 
-function sayHi { 
+function sayHi() { 
   return "hi"; 
 }
 
-sayHi[];
+sayHi();
 
-function add(a b) { 
+function add(a, b) { 
   return a + b; 
 }
 
-add(5);
+add(5, 10);
 
 function getName() {
-  "Name"
+  return "Name";
 };
 
-getNname();
+getName();
 
 function multiply(x, y) 
   return x * y;
