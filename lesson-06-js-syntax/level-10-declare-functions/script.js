@@ -4,3 +4,17 @@
 function getUser() {
   return "returns the current user";
 }
+
+function cancelOrder() {
+  return "cancels the current order";
+}
+
+function addToCart() {
+  return "adds an item to the cart";
+}
+
+function depositCheck() {
+  return "deposits a check remotely";
+}
+
+export default addToCart;
