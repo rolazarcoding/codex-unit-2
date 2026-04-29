@@ -4,6 +4,22 @@
 // Example:
 // let userProfile = { name: "Ava", age: 28, isSubscriber: false };
 
-let userProfile = {};
+const userProfile = {
+  name: "Rolazar",
+  age: 21,
+  isSubscriber: true,
+};
+
+const car = {
+  make: "Honda",
+  model: "Civic",
+  year: 2026,
+};
+
+const animal = {
+  species: "dog",
+  hasFur: true,
+  doesLayEggs: false,
+};
 
 export default userProfile;
