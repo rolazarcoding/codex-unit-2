@@ -4,4 +4,7 @@
 // Example:
 // let userNames = ["Ava", "Jon", "Maya"];
 
-let userNames = [];
+const userNames = ["Rolazar", "Jennifer", "Tom"];
+const kidsAges = [10, 11, 13];
+
+export default kidsAges;
