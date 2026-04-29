@@ -7,13 +7,16 @@ let userAge;
 let city;
 let country;
 
+firstName = "Rolazar";
+userAge = 21;
+
 // TODO: Part B: fix five faulty string initializations so they parse correctly.
 
-let = "noName";
+let myVariable = "noName";
 
-let lastName "Smith";
+let lastName = "Smith";
 
-let city = "New York;
+let city = "New York";
 
 let country = ""USA"";
 
