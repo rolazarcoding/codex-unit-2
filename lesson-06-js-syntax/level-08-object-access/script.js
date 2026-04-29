@@ -32,3 +32,9 @@ const order = {
 };
 
 const id = order.id;
+const status = order.status;
+
+const name = order.customer.name;
+const tax = order.totals.tax;
+
+export default tax;
