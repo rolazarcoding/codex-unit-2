@@ -7,3 +7,9 @@
 // Add your lines below:
 
 let userName;
+let carYear;
+let animalSpecies;
+let paintColor;
+let numberOfStudents;
+
+export default paintColor;
