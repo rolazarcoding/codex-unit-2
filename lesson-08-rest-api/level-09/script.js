@@ -1,6 +1,5 @@
-// Level 07 starter script
-// TODO: Build a data object from form.elements and use fetch POST to https://postman-echo.com/post
-const form = document.getElementById("sample-form");
+// Level 09 starter script
+// TODO: Save a target element and set its innerText to briefly compare GET and POST.
 form.onsubmit = handleSubmit;
 
 async function handleSubmit(event) {
