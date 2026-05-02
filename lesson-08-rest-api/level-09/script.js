@@ -17,6 +17,6 @@ async function handleSubmit(event) {
   });
   const user = await response.json();
   const id = user.id;
-  const pTag = document.getElementById("v1");
+  const pTag = document.getElementById("result");
   pTag.innerText = "User ID: " + id;
 }

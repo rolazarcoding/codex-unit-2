@@ -1,5 +1,5 @@
 // Level 07 starter script
-// TODO: Build a data object from form.elements and use fetch POST to https://postman-echo.com/post
+// TODO: Build a data object from form.elements and use fetch POST to https://api.jsoning.com/mock/public/users
 const form = document.getElementById("sample-form");
 
 form.onsubmit = handleSubmit;
