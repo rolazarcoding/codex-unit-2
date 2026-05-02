@@ -14,7 +14,8 @@ Complete these tasks
 - Include `script.js` with `defer` and attach a submit handler.
 - In the handler, call `event.preventDefault()` and build a `data` object.
 - Send a POST request to a dummy login endpoint using `fetch` with JSON headers.
-- Parse the JSON response and show feedback in the UI.
+- Parse the JSON response.
+- Inspect the data.
 
 Hints
 
