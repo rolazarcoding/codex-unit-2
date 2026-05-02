@@ -1,13 +1,22 @@
-// Level 09 starter script
-// TODO: POST pre-processed data, parse JSON response, and display three selected values.
+// Level 07 starter script
+// TODO: Build a data object from form.elements and use fetch POST to https://postman-echo.com/post
 const form = document.getElementById("sample-form");
-const v1 = document.getElementById("v1");
-const v2 = document.getElementById("v2");
-const v3 = document.getElementById("v3");
+form.onsubmit = handleSubmit;
 
-async function handleSubmit(e) {
-  e.preventDefault();
-  // TODO: collect data, POST to echo server, parse response, and insert values into v1/v2/v3
+async function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const data = {
+    a: form.elements.a.value,
+    b: form.elements.b.value,
+    c: form.elements.c.value,
+  };
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+  const user = await response.json();
+  const id = user.id;
+  const pTag = document.getElementById("v1");
+  pTag.innerText = "User ID: " + id;
 }
-
-if (form) form.onsubmit = handleSubmit;
