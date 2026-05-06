@@ -1,41 +1,43 @@
 ## Level 02 — Feedback Message
 
-Objective
+## Objective
+
 Show clear success and error feedback to the user after a login attempt.
 
-Benefits
+## Benefits
 
-- Improves UX by surfacing meaningful API responses.
-- Teaches DOM updates and form lifecycle (resetting).
+- Teaches accessible feedback patterns using DOM APIs.
+- Reinforces parsing API responses for UX messages.
 
-Complete these tasks
+## Complete these tasks
 
-- Add elements with ids `error` and `success` to the page.
-- Send a fetch request to `https://dummyjson.com/auth/login`
-- Add `headers: { "Content-Type": "application/json" }` to the fetch options.
-- Select the `error` and `success` elements.
-- On success, display a friendly message in `success` and call `form.reset()`.
-- On failure, display the error message in the `error` element.
+- Parse the response into a `result` variable.
+- Select and store the `error` and `success` elements.
+- On login failure, display the API error message in the `error` element (`innerText`).
+- On login success, display a friendly message in the `success` element (`innerText`).
+- On successful login, call `form.reset()`.
 
-Hints
+## Hints
 
-- Clear the opposite element when showing an error/success to avoid mixed messages.
-- Use `if` statements (eg. `if (message !== undefined)`) to clear inappropriate messages.
+- Use `document.getElementById('error')` and `document.getElementById('success')`.
+- Look for an `error` or `message` field on the parsed `result`.
 
-More information
+## More information
 
-- Valid logins are here: `https://dummyjson.com/users`
-- Keep messages short and actionable. For tests, ensure elements exist and are updated.
+- https://dummyjson.com/docs/auth
+- Example accounts: https://dummyjson.com/users
 
-Usage tips
+## Usage tips
 
-- Use `aria-live` regions so assistive tech announces updates.
-- Use `element.textContent = '...'` and set appropriate ARIA roles.
+- Use `aria-live` or `role="status"` on feedback elements for screen readers.
 
-Example
-
-- Update an element:
+## Example
 
 ```js
-errorEl.innerText = "Login failed: invalid credentials";
+// After parsing
+if (errorMessage) errorEl.innerText = "Invalid credentials";
+else {
+  successEl.innerText = "Logged in!";
+  form.reset();
+}
 ```
