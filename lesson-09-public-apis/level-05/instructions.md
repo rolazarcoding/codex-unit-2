@@ -1,7 +1,7 @@
 ## Level 05 — Trivia API
 
 Objective
-Send a GET request with query parameters to a Trivia API and render a question.
+Send a GET request to https://the-trivia-api.com/v2/questions with query parameters to a Trivia API and render a question.
 
 Benefits
 

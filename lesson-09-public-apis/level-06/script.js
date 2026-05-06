@@ -1,8 +1,33 @@
-const questionEl6 = document.getElementById("question");
-const choicesEl6 = document.getElementById("choices");
-const feedbackEl6 = document.getElementById("feedback");
+const formTag = document.getElementById("search-form");
+formTag.onsubmit = handleSubmit;
 
-// TODO: fetch a question, extract correct & incorrect answers, shuffle them
-// TODO: render choices as accessible buttons and wire click handlers
-// TODO: show feedback on selection and provide retry/next controls
-console.log("level-06 scaffold");
+async function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const data = {
+    category: form.elements.category.value,
+    difficulty: form.elements.difficulty.value,
+  };
+  const queryString = new URLSearchParams(data);
+  const response = await fetch(
+    "https://the-trivia-api.com/v2/questions" + "?" + queryString,
+    { method: "GET" },
+  );
+  const result = await response.json();
+  const question = result[0].question.text;
+  const choiceA = result[0].correctAnswer;
+  const choiceB = result[0].incorrectAnswers[0];
+  const choiceC = result[0].incorrectAnswers[1];
+  const choiceD = result[0].incorrectAnswers[2];
+  console.log(question);
+  const questionTag = document.querySelector("#question");
+  const choiceTagA = document.querySelector("#choiceA");
+  const choiceTagB = document.querySelector("#choiceB");
+  const choiceTagC = document.querySelector("#choiceC");
+  const choiceTagD = document.querySelector("#choiceD");
+  questionTag.innerHTML = "<h3>" + question + "</h3>";
+  choiceTagA.innerHTML = "<pre>A) " + choiceA + "</pre>";
+  choiceTagB.innerHTML = "<pre>B) " + choiceB + "</pre>";
+  choiceTagC.innerHTML = "<pre>C) " + choiceC + "</pre>";
+  choiceTagD.innerHTML = "<pre>D) " + choiceD + "</pre>";
+}

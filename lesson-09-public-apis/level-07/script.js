@@ -1,6 +1,3 @@
-const msg7 = document.getElementById("message");
-if (msg7) {
-  // TODO: insert explanatory text about API keys (do not include real keys)
-  msg7.textContent =
-    "Add an explanation about API keys here. Do not commit real keys.";
-}
+const divTag = document.getElementById("message");
+divTag.innerHTML =
+  "<h4>An API key is a unique code that must be attached to each request to the API server.</h4>";

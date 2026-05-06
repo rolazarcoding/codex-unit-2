@@ -14,7 +14,7 @@ async function handleSubmit(event) {
     };
     const dataString = JSON.stringify(data);
     const response = await fetch("https://dummyjson.com/auth/login", {
-      method: "POST",
+      method: "GET",
       body: dataString,
       headers: { "Content-Type": "application/json" },
     });
@@ -34,8 +34,9 @@ async function handleSubmit(event) {
   } catch (error) {
     // CATCH THE ERROR
     // RUN THIS CODE WHEN THERE IS AN ERROR
-    debugger;
     // console.error(error);
     console.error("You need to use the POST method.");
+    const errorTag = document.getElementById("error");
+    errorTag.innerText = "There's an error connecting to the server.";
   }
 }

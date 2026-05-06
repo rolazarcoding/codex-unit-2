@@ -11,7 +11,6 @@ Complete these tasks
 
 - Read form values using `FormData` or `form.elements`.
 - Build a plain object from the values and construct `URLSearchParams`.
-- Attach the serialized query string to a GET request URL.
 
 Hints
 

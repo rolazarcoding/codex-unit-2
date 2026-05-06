@@ -1,11 +1,20 @@
-const btn8 = document.getElementById("get-joke");
-const jokeEl = document.getElementById("joke");
-const errorEl8 = document.getElementById("error");
+const formTag = document.getElementById("memeForm");
+formTag.onsubmit = handleSubmit;
 
-if (btn8) {
-  btn8.addEventListener("click", async () => {
-    // TODO: perform fetch sending API key in header or query param as required
-    // TODO: parse response and render joke string, handle invalid key errors
-    console.log("level-08 placeholder");
-  });
+async function handleSubmit(event) {
+  event.preventDefault();
+  const data = {
+    "api-key": "efc30af1a6df4614aba14c3d062d8eb6",
+  };
+  const queryString = new URLSearchParams(data);
+  const response = await fetch(
+    "https://api.humorapi.com/memes/random" + "?" + queryString,
+  );
+  const result = await response.json();
+  const description = result.description;
+  const src = result.url;
+  const imageTag = document.getElementById("meme");
+  const outputTag = document.getElementById("description");
+  outputTag.innerText = description;
+  imageTag.src = src;
 }
