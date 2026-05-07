@@ -1,5 +1,7 @@
 ## Level 02 — Simple GET and docs reading
 
+Hello world!
+
 ## Objective
 
 - Make a GET request to a public API, view the response, and read the docs.
