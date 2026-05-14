@@ -2,4 +2,4 @@
 // Example: Console.log one fact learned from the API docs.
 
 // TODO: Replace this placeholder with a short note from the docs.
-console.log("Hello world!");
+console.log("The docs show there are different ways to trivia question.");

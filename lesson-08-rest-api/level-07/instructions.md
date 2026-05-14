@@ -14,18 +14,18 @@ This level practices adding fetch options to send a POST request and inspecting 
 - Ensure the form inputs have `name` attributes.
 - In `script.js`, implement a form handler attached to `form.onsubmit` and call `event.preventDefault()`.
 - Use `form.elements` to collect input values into a `data` object whose keys match input `name` attributes.
-- Use `async/await` to call `fetch('https://api.jsoning.com/mock/public/users', { method: 'POST', body: data })`.
+- Use `async/await` to call `fetch('https://jsonplaceholder.typicode.com/posts', { method: 'POST', body: data })`.
 - Insert a short explanation into the `#result` element describing how the data was attached to the request.
 
 ## Hints
 
-- Use `form.elements['username'].value` or numeric indexes like `form.elements[0].value`.
 - The data is intentionally not stringified for this exercise.
-- The server expects a properly formatted body; leaving the object un-stringified will surface an error to debug.
+- The server expects a properly formatted body. Leaving the object un-stringified may produce an error.
 
 ## More information
 
 - `fetch` accepts an options object where `method` and `body` are commonly set for POST requests.
+- For POST request, data is attached to the `body` of the `fetch` options.
 - Further reading: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 
 ## Usage tips
@@ -37,7 +37,13 @@ This level practices adding fetch options to send a POST request and inspecting 
 ```js
 async function handleSubmit(e) {
   e.preventDefault();
-  // const data = { username: form.elements['username'].value, email: form.elements['email'].value };
-  // await fetch('https://api.jsoning.com/mock/public/users', { method: 'POST', body: data });
+  const data = {
+    username: form.elements.username.value,
+    email: form.elements.email.value,
+  };
+  const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    body: data,
+  });
 }
 ```

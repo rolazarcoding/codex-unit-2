@@ -2,4 +2,5 @@
 // No solution provided — students should confirm Postman opens.
 
 // Optional: students may log a short confirmation here after installing.
-console.log("Hello world!");
+console.log("Windows");
+console.log("Installation was easy with defaults.");
